@@ -114,11 +114,11 @@ f = function(e) {
 		//console.log(items[i].name[0]);
 		if(items[i].name[0] == _query)
 			var THE_CAGE = Math.random();
-			console.log(THE_CAGE);
-			if (THE_CAGE < .51){ document.body.style.backgroundImage="url('THE_CAGE.jpeg')";}
-			var _a = items[i].description[0].indexOf('.');
-			_query_result = items[i].description[0];//.substring(0, _a);
-			_link = "https://docs.python.org/2/library/functions.html#" + _query;
+			// console.log(THE_CAGE);
+			if (THE_CAGE < .51){document.body.style.backgroundImage="url('THE_CAGE.jpeg')";}
+				var _a = items[i].description[0].indexOf('.');
+				_query_result = items[i].description[0];//.substring(0, _a);
+				_link = "https://docs.python.org/2/library/functions.html#" + _query;
 	}
 
 	//messy piece of shit that I got from googledict
