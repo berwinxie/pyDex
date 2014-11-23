@@ -103,7 +103,8 @@ chrome.extension.sendMessage({}, function(response) {
 });
 
 f = function(e) {
-	var _query = window.getSelection().toString();
+	var _query = window.getSelection().toString().toLowerCase();
+
 	console.log("query: " + _query + " len: " + _query.length);
 	var _last_var_x = e.pageX - 100;
 	var _last_var_y = e.pageY + 10;
