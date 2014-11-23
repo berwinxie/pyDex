@@ -1,9 +1,9 @@
 {
-  "name": "Dicthub",
+  "name": "pyDex",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Python index",
+  "homepage_url": "http://bearwin.net",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -26,8 +26,7 @@
   "content_scripts": [
     {
       "matches": [
-        //"http://*/*", "https://*/*"
-        "https://github.com/*"
+        "http://*/*", "https://*/*"
       ],
       "js": [
         "js/jquery/jquery.min.js", "src/inject/inject.js"
