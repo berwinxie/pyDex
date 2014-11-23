@@ -77,7 +77,15 @@ var items = [{"name": ["abs"], "description": ["Return the absolute value of a n
 {"name": ["apply"], "description": ["The  function  argument must be a callable object (a user-defined or built-in  function or method, or a class object) and the  args  argument must be a  sequence.  The  function  is called with  args  as the argument list; the number  of arguments is the length of the tuple. If the optional  keywords  argument is  present, it must be a dictionary whose keys are strings.  It specifies keyword  arguments to be added to the end of the argument list. Calling  apply()  is  different from just calling  function(args) , since in that case there is  always exactly one argument.  The use of  apply()  is equivalent to   function(*args,   **keywords) .       Deprecated since version 2.3:  Use  function(*args,   **keywords)  instead of   apply(function,   args,   keywords)  (see  Unpacking Argument Lists ).      "]},
 {"name": ["buffer"], "description": ["The  object  argument must be an object that supports the buffer call interface  (such as strings, arrays, and buffers).  A new buffer object will be created  which references the  object  argument. The buffer object will be a slice from  the beginning of  object  (or from the specified  offset ). The slice will  extend to the end of  object  (or will have a length given by the  size   argument).   "]},
 {"name": ["coerce"], "description": ["Return a tuple consisting of the two numeric arguments converted to a common  type, using the same rules as used by arithmetic operations. If coercion is not  possible, raise  TypeError .   "]},
-{"name": ["intern"], "description": ["Enter  string  in the table of \"interned\" strings and return the interned string  - which is  string  itself or a copy. Interning strings is useful to gain a  little performance on dictionary lookup - if the keys in a dictionary are  interned, and the lookup key is interned, the key comparisons (after hashing)  can be done by a pointer compare instead of a string compare.  Normally, the  names used in Python programs are automatically interned, and the dictionaries  used to hold module, class or instance attributes have interned keys.       Changed in version 2.3:  Interned strings are not immortal (like they used to be in Python 2.2 and  before); you must keep a reference to the return value of  intern()  around  to benefit from it.      "]}];
+{"name": ["intern"], "description": ["Enter  string  in the table of \"interned\" strings and return the interned string  - which is  string  itself or a copy. Interning strings is useful to gain a  little performance on dictionary lookup - if the keys in a dictionary are  interned, and the lookup key is interned, the key comparisons (after hashing)  can be done by a pointer compare instead of a string compare.  Normally, the  names used in Python programs are automatically interned, and the dictionaries  used to hold module, class or instance attributes have interned keys.       Changed in version 2.3:  Interned strings are not immortal (like they used to be in Python 2.2 and  before); you must keep a reference to the return value of  intern()  around  to benefit from it.      "]}[{"name": ["append"], "description": ["Add an item to the end of the list; equivalent to a[len(a):] = [x]. "]},
+{"name": ["extend"], "description": ["Extend the list by appending all the items in the given list; equivalent to a[len(a):] = L. "]},
+{"name": ["insert"], "description": ["Insert an item at a given position.  The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x). "]},
+{"name": ["remove"], "description": ["Remove the first item from the list whose value is x. It is an error if there is no such item. "]},
+{"name": ["pop"], "description": ["Remove the item at the given position in the list, and return it.  If no index is specified, a.pop() removes and returns the last item in the list.  (The square brackets around the i in the method signature denote that the parameter is optional, not that you should type square brackets at that position.  You will see this notation frequently in the Python Library Reference.) "]},
+{"name": ["index"], "description": ["Return the index in the list of the first item whose value is x. It is an error if there is no such item. "]},
+{"name": ["count"], "description": ["Return the number of times x appears in the list. "]},
+{"name": ["sort"], "description": ["Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation). "]},
+{"name": ["reverse"], "description": ["Reverse the elements of the list, in place. "]}];
 
 chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
@@ -88,7 +96,7 @@ chrome.extension.sendMessage({}, function(response) {
 		// This part of the script triggers when page is done loading
 		console.log("Hello. This message was sent from scripts/inject.js");
 		// ----------------------------------------------------------
-		
+
 	}
 	}, 10);
 });
