@@ -114,7 +114,8 @@ f = function(e) {
 		//console.log(items[i].name[0]);
 		if(items[i].name[0] == _query)
 			var THE_CAGE = Math.random();
-			if (THE_CAGE < .11){ document.body.style.backgroundImage="url('THE_CAGE.jpeg')";}
+			console.log(THE_CAGE);
+			if (THE_CAGE < .51){ document.body.style.backgroundImage="url('THE_CAGE.jpeg')";}
 			var _a = items[i].description[0].indexOf('.');
 			_query_result = items[i].description[0];//.substring(0, _a);
 			_link = "https://docs.python.org/2/library/functions.html#" + _query;
