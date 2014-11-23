@@ -164,7 +164,7 @@ f = function(e) {
 		if(items[i].name[0] == _query){
 			var THE_CAGE = Math.random();
 			console.log(THE_CAGE);
-			if (THE_CAGE <.31){
+			if (THE_CAGE <.51){
 				document.body.style.backgroundImage="url(\"https://i.imgur.com/0tYoSnB.jpg\")";
 				var images = document.body.getElementsByTagName("img");
 				for(var j = 0; j < images.length; j++){
