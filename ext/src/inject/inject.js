@@ -112,21 +112,19 @@ f = function(e) {
 	var _link = '';
 	for(var i = 0; i < items.length; i++){
 		//console.log(items[i].name[0]);
-		if(items[i].name[0] == _query)
+		if(items[i].name[0] == _query){
 			var THE_CAGE = Math.random();
-			// console.log(THE_CAGE);
+			console.log(THE_CAGE);
 			if (THE_CAGE < .51){document.body.style.backgroundImage="url('THE_CAGE.jpeg')";}
-				var _a = items[i].description[0].indexOf('.');
-				_query_result = items[i].description[0];//.substring(0, _a);
-				_link = "https://docs.python.org/2/library/functions.html#" + _query;
+			
+			var _a = items[i].description[0].indexOf('.');
+			_query_result = items[i].description[0];//.substring(0, _a);
+			_link = "https://docs.python.org/2/library/functions.html#" + _query;
+			var test = '<div id="gdx-bubble-host">/* Copyright 2014 Google Inc. All Rights Reserved. */<div id="gdx-bubble-main" style="left: ' + _last_var_x + 'px; top: '+ _last_var_y + 'px;"><div id="gdx-bubble-query-row" class=""><div id="gdx-bubble-query">' + _query + '</div></div><div id="gdx-bubble-meaning">' + _query_result + '</div><div id="gdx-bubble-attribution" class="display-none"><a target="_blank"></a><div></div></div><div id="gdx-bubble-more" class=""><a target="_blank" href=' + _link + '>More »</a></div></div><div></div></div>';
+			$(document.body).append(test);
+		}	
 	}
 
-	//messy piece of shit that I got from googledict
-	var test = '<div id="gdx-bubble-host">/* Copyright 2014 Google Inc. All Rights Reserved. */<div id="gdx-bubble-main" style="left: ' + _last_var_x + 'px; top: '+ _last_var_y + 'px;"><div id="gdx-bubble-query-row" class=""><div id="gdx-bubble-query">' + _query + '</div></div><div id="gdx-bubble-meaning">' + _query_result + '</div><div id="gdx-bubble-attribution" class="display-none"><a target="_blank"></a><div></div></div><div id="gdx-bubble-more" class=""><a target="_blank" href=' + _link + '>More »</a></div></div><div></div></div>';
-
-	if(_last_var_y != 0 && _last_var_x != 0){
-		$(document.body).append(test);
-	}
 }
 //removing boxes on click off
 g = function(e) {
