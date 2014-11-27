@@ -405,16 +405,7 @@ f = function(e) {
 	for(var i = 0; i < items.length; i++){
 		//console.log(items[i].name[0]);
 		if(items[i].name[0] == _query){
-			var THE_CAGE = Math.random();
-			console.log(THE_CAGE);
-			if (THE_CAGE <.31){
-				document.body.style.backgroundImage="url(\"https://i.imgur.com/0tYoSnB.jpg\")";
-				var images = document.body.getElementsByTagName("img");
-				for(var j = 0; j < images.length; j++){
-					// images[i].setAttribute("src", "https://i.imgur.com/0tYoSnB.jpg");
-					images[j].src= "https://i.imgur.com/0tYoSnB.jpg";
-				}
-			}
+
 			var _a = items[i].description[0].indexOf('.');
 			_query_result = items[i].description[0].substring(0, _a + 1);
 			_link = "https://docs.python.org/2/library/functions.html#" + _query;
